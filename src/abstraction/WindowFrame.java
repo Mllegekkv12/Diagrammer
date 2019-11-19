@@ -15,13 +15,13 @@ public abstract class WindowFrame extends JFrame {
         initFrame();
     }
 
-    public void initPanel(int width, int height) {
+    private void initPanel(int width, int height) {
         JPanel panel = new JPanel();
         panel.setPreferredSize(new Dimension(width, height));
         add(panel);
     }
 
-    public void initFrame() {
+    private void initFrame() {
         pack();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Diagrammer");
