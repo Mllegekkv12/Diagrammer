@@ -7,7 +7,7 @@ public abstract class WindowFrame extends JFrame {
     private int width;
     private int height;
 
-    public WindowFrame(int x, int y) {
+    protected WindowFrame(int x, int y) {
         new Frame().setVisible(true);
         this.width = x;
         this.height = y;
