@@ -25,7 +25,6 @@ public class Menu_Window extends WindowFrame {
         panel.add(button1);
         add(panel);
     }
-
     public class Action{}
 
 
