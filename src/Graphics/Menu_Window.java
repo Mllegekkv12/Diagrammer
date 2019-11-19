@@ -1,3 +1,4 @@
+
 package Graphics;
 
 import abstraction.WindowFrame;
@@ -5,29 +6,40 @@ import logic.ToCalculate;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.Scanner;
 
-//import java.awt.event.ActionListener;
-import javax.swing.*;
-import java.awt.*;
-public class Menu_Window extends WindowFrame {
+public class Menu_Window extends WindowFrame implements ToCalculate {
     public Menu_Window(int width, int height) {
         super(width, height);
-//        JLabel
-        JButton button1 = new JButton("Calculate");
-        button1.setBorderPainted(true);
-        button1.setFocusPainted(false);
-        button1.setContentAreaFilled(false);
-        JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(1,1,1,10));
-        Box box = Box.createVerticalBox();
-        box.add(Box.createVerticalStrut(250));
-        setContentPane(box);
-        panel.add(button1);
-        add(panel);
+        final Frame f = new Frame("Diagrammer");
+        JTextField textField = new JTextField(20);
+        AbstractAction action = new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("some action");
+               // double inputX = textField;
+                count(5, 3, 0, 0);
+            }
+        };
+
+        textField.addActionListener( action );
+        JButton button = new JButton("Calculate");
+        button.addActionListener( action );
+        f.setSize(width, height);
+        f.setLayout(new FlowLayout(FlowLayout.LEFT));
+        f.add(new Label("Введите данные:"));
+        f.add(textField);
+        f.add(button);
+        f.setVisible(true);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
-    public class Action{}
-
-
+    @Override
+    public double count(double x, double y, double sum, double sector) {
+        sum = x + y;
+        sector = x / sum;
+        System.out.println(sector);
+        return sector;
+    }
 }
-
