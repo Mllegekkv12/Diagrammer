@@ -7,13 +7,15 @@ public abstract class WindowFrame extends JFrame {
     private int width;
     private int height;
 
-    public WindowFrame(int width, int height) {
+    public WindowFrame(int x, int y) {
         new Frame().setVisible(true);
-        initPanel();
+        this.width = x;
+        this.height = y;
+        initPanel(x, y);
         initFrame();
     }
 
-    public void initPanel() {
+    public void initPanel(int width, int height) {
         JPanel panel = new JPanel();
         panel.setPreferredSize(new Dimension(width, height));
         add(panel);
