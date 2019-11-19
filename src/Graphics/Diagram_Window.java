@@ -2,6 +2,8 @@ package Graphics;
 
 
 import abstraction.WindowFrame;
+import logic.ToCalculate;
+import logic.ToDRAW;
 
 public class Diagram_Window extends WindowFrame {
     public Diagram_Window(int width, int height) {
@@ -11,5 +13,4 @@ public class Diagram_Window extends WindowFrame {
         System.out.println("SUCCESS");
         //WindowFrame
     }
-
 }

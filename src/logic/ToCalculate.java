@@ -1,11 +1,8 @@
 package logic;
 
-public class ToCalculate {
+public interface ToCalculate {
     //переменные из пользовательского ввода
-    private int x;
-    public int getX(){
-        this.x = x;
-        return x;
-    }
+    double count(double x, double y, double sum, double sector);
 
+    ;
 }
