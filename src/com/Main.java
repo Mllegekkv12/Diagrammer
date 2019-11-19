@@ -9,13 +9,9 @@ public class Main extends Diagram_Window {
     }
 
     public static void main(String[] args) {
-        new Diagram_Window(800, 1000);
-        Diagram_Window.XXX();
-        new Menu_Window(30, 30);
-        Menu_Window.XXX();
+        //new Diagram_Window(800, 1000);
+        new Menu_Window(400, 300);
     }
-    /*public Main(int width, int height) {
-        super(width, height);*/
 }
-//   Diagram_Window DW = new Diagram_Window(500, 300);
+
 
