@@ -4,13 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public abstract class WindowFrame extends JFrame {
-    private int width;
-    private int height;
 
     protected WindowFrame(int x, int y) {
         new Frame().setVisible(true);
-        this.width = x;
-        this.height = y;
         initPanel(x, y);
         initFrame();
     }
