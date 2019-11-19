@@ -1,4 +1,4 @@
-package Graphics;
+/*package Graphics;
 
 import abstraction.WindowFrame;
 
@@ -11,10 +11,9 @@ public class Menu_Window extends WindowFrame {
         super(width, height);
     }
 
-    @Override
     public void initPanel() {
         JPanel panel = new JPanel();
         panel.setPreferredSize(new Dimension(500, 300));
         add(panel);
     }
-}
+}*/
