@@ -14,5 +14,8 @@ public class Main extends Diagram_Window {
         new Menu_Window(30, 30);
         Menu_Window.XXX();
     }
+    /*public Main(int width, int height) {
+        super(width, height);*/
 }
+//   Diagram_Window DW = new Diagram_Window(500, 300);
 
