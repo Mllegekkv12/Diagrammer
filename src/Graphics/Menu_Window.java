@@ -11,7 +11,7 @@ import java.awt.event.ActionEvent;
 public class Menu_Window extends WindowFrame implements ToCalculate {
     public Menu_Window(int width, int height) {
         super(width, height);
-        final Frame f = new Frame("Diagrammer");
+        final JFrame f = new JFrame("Diagrammer");
         JTextField textField = new JTextField(20);
         JButton button = new JButton("Calculate");
         AbstractAction changewindow = new AbstractAction() {
@@ -40,7 +40,9 @@ public class Menu_Window extends WindowFrame implements ToCalculate {
         f.add(textField);
         f.add(button);
         f.setVisible(true);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        f.setLocationRelativeTo(null);
+        f.setResizable(false);
+        f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
     @Override

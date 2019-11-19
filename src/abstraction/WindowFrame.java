@@ -23,6 +23,6 @@ public abstract class WindowFrame extends JFrame {
         setTitle("Diagrammer");
         setLocationRelativeTo(null);
         setResizable(false);
-        setVisible(true);
+        setVisible(false);
     }
 }
