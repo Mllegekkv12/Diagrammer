@@ -43,3 +43,4 @@ public class Menu_Window extends WindowFrame implements ToCalculate {
         return sector;
     }
 }
+

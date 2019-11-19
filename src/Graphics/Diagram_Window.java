@@ -17,7 +17,7 @@ public class Diagram_Window extends WindowFrame implements ToCalculate {
         super(width, height);
     }
 
-    public double count(double x, double y, double sum, double sector) {
+    public  double count(double x, double y, double sum, double sector) {
         sum = x + y;
         sector = x / sum;
         System.out.println(sector);
