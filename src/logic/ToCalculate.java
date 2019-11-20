@@ -1,5 +1,7 @@
 package logic;
 
+import java.util.ArrayList;
+
 public interface ToCalculate {
-    double count(double x, double y, double sum, double sector);
+    double count(ArrayList<Double> list, double sum, double sector);
 }

@@ -6,31 +6,42 @@ import logic.ToDraw;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Menu_Window extends Diagram_Window implements ToCalculate, ToDraw {
     public Menu_Window(int width, int height) {
         super(width, height);
+
+        ArrayList<Double> list = new ArrayList<>();
+
         final JFrame f = new JFrame("Diagrammer");
-        JTextField textField = new JTextField(20);
+        JTextField textField = new JTextField(30);
+
         JButton button = new JButton("Calculate");
         AbstractAction changewindow = new AbstractAction() {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Тут будет открываться окно с готовой диаграммой; возможно здесь будет функция подсчета");
-                JFrame Dia = new JFrame("Diagrammer");
+               // JFrame Dia = new JFrame("Diagrammer");
                 Draws d = new Draws();
                 d.Drawing();
             }
         };
         AbstractAction action = new AbstractAction() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e ) {
                 double n = Double.parseDouble(textField.getText());
-                System.out.println(n);
-                textField.setText(""); //TODO ДОБАВИТЬ ЦИКЛ ВВОДА ЗНАЧЕНИЙ В МАССИВ ПО НАЖАТИЮ ENTER
-                repaint();
-                revalidate();
-                count(n, 2, 0, 0); //TODO ПЕРЕПИСАТЬ ЛОГИКУ ДЛЯ ДИНАМИЧЕСКОГО МАССИВА (С ЦИКЛОМ)
+                    System.out.println(n);
+                    list.add(n);
+                    textField.setText(""); //TODO ДОБАВИТЬ ЦИКЛ ВВОДА ЗНАЧЕНИЙ В МАССИВ ПО НАЖАТИЮ ENTER
+                    repaint();
+                    revalidate();
+//                for (Double aDouble : list) {
+//                    //System.out.println(aDouble);
+//                }
+                count(list,0, 0); //TODO ПЕРЕПИСАТЬ ЛОГИКУ ДЛЯ ДИНАМИЧЕСКОГО МАССИВА (С ЦИКЛОМ)
             }
+
         };
 
         textField.addActionListener(action);
