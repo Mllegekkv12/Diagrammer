@@ -2,18 +2,10 @@ package Graphics;
 
 import abstraction.WindowFrame;
 import logic.ToCalculate;
-import logic.ToDraw;
 import org.jetbrains.annotations.NotNull;
-import org.w3c.dom.ls.LSOutput;
 
 import javax.swing.*;
-import java.applet.Applet;
 import java.awt.*;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
-import java.awt.geom.Arc2D;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Diagram_Window extends WindowFrame implements ToCalculate {
     Diagram_Window(int width, int height) {

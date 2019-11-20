@@ -2,14 +2,13 @@
 package Graphics;
 
 import logic.ToCalculate;
-import logic.ToDraw;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
-import java.util.List;
 
-public class Menu_Window extends Diagram_Window implements ToCalculate, ToDraw {
+public class Menu_Window extends Diagram_Window implements ToCalculate {
     public Menu_Window(int width, int height) {
         super(width, height);
 
