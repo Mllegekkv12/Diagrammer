@@ -16,22 +16,31 @@ public class Menu_Window extends Diagram_Window implements ToCalculate {
         ArrayList<String> Tlist = new ArrayList<>();
 
         final JFrame f = new JFrame("Diagrammer");
+        final JFrame names = new JFrame("List of names");
         JTextField textField = new JTextField(7);
         JTextField text = new JTextField(10);
-
         JButton button = new JButton("Построить график");
         AbstractAction changewindow = new AbstractAction() {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Тут будет открываться окно с готовой диаграммой; возможно здесь будет функция подсчета");
-                Name.clear();
-                list.clear();
                 Draws d = new Draws();
                 d.Drawing();
+                names.setSize(200, 300);
+                names.setLayout(new FlowLayout(FlowLayout.CENTER));
+                names.setVisible(true);
+                names.setLocationRelativeTo(null);
+                names.setResizable(false);
+                for (int i = 0; i < Grad.size(); i++) {
+                    setLayout(new FlowLayout(FlowLayout.CENTER));
+                    names.add(new Label(i + 1 + ". " + (Grad.get(i)/3.6) + "% " + Name.get(i)));
+                }
+                Name.clear();
+                list.clear();
             }
         };
         AbstractAction action = new AbstractAction() {
             @Override
-            public void actionPerformed(ActionEvent e ) {
+            public void actionPerformed(ActionEvent e) {
                 double n = Double.parseDouble(textField.getText());
                 list.add(n);
                 Grad.clear();
@@ -39,7 +48,6 @@ public class Menu_Window extends Diagram_Window implements ToCalculate {
                 repaint();
                 revalidate();
                 count(list, 0);
-
                 String n1 = text.getText();
                 Tlist.add(n1);
                 text.setText("");
