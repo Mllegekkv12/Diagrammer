@@ -1,23 +1,24 @@
 
 package Graphics;
 
-import abstraction.WindowFrame;
 import logic.ToCalculate;
-
+import logic.ToDraw;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
-public class Menu_Window extends WindowFrame implements ToCalculate {
+public class Menu_Window extends Diagram_Window implements ToCalculate, ToDraw {
     public Menu_Window(int width, int height) {
         super(width, height);
         final JFrame f = new JFrame("Diagrammer");
         JTextField textField = new JTextField(20);
         JButton button = new JButton("Calculate");
         AbstractAction changewindow = new AbstractAction() {
-            @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Тут будет открываться окно с готовой диаграммой; возможно здесь будет функция подсчета");
+                JFrame Dia = new JFrame("Diagrammer");
+                Draws d = new Draws();
+                d.Drawing();
             }
         };
         AbstractAction action = new AbstractAction() {
@@ -35,7 +36,7 @@ public class Menu_Window extends WindowFrame implements ToCalculate {
         textField.addActionListener(action);
         button.addActionListener(changewindow);
         f.setSize(width, height);
-        f.setLayout(new FlowLayout(FlowLayout.LEFT));
+        f.setLayout(new FlowLayout(FlowLayout.CENTER));
         f.add(new Label("Введите данные:"));
         f.add(textField);
         f.add(button);
@@ -43,14 +44,6 @@ public class Menu_Window extends WindowFrame implements ToCalculate {
         f.setLocationRelativeTo(null);
         f.setResizable(false);
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-    }
-
-    @Override
-    public double count(double x, double y, double sum, double sector) {
-        sum = x + y;
-        sector = x / sum;
-        System.out.println(sector);
-        return sector;
     }
 }
 

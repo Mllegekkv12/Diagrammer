@@ -3,7 +3,9 @@ package logic;
 import java.awt.*;
 
 public interface ToDraw{
-    void Draw(Graphics g);
+    default void paint(Graphics g) {
+
+    }
 
 }
 
