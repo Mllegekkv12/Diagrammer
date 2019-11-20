@@ -48,11 +48,11 @@ public class Diagram_Window extends WindowFrame implements ToCalculate {
     }
 
     static class Drawable extends JFrame {
-
+    Diagram_Window Dw = new Diagram_Window(getWidth(),getHeight());
 
         public void paint(@NotNull Graphics g) {
             setForeground(Color.green);
-            g.fillArc(100, 100, 300, 300, 0,120);
+            g.fillArc(100, 100, 300, 300, 0, 120);
             g.fillArc(95, 103, 300, 300, 120, 120);
             //g.fillArc(100, 105, 300, 300, 240, 120);
 
