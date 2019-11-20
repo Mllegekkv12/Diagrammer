@@ -5,7 +5,8 @@ package logic;
 public interface ToCalculate {
     ArrayList<Double> sectors = new ArrayList<>();
     ArrayList<Integer> Grad = new ArrayList<>();
-    default double count(ArrayList<Double> list, double sum, double sector) {
+    ArrayList<String> name = new ArrayList<>();
+    default void count(ArrayList<Double> list, double sum) {
         double tm;
         int j = 0;
         for (Double eDouble : list) {
@@ -19,8 +20,11 @@ public interface ToCalculate {
         for (int i = sectors.size() - j; i < sectors.size(); i++) {
             Grad.add((int) (sectors.get(i)*360));
         }
-        System.out.println(Grad + " Основной");
-       // Grad.clear();
-        return sector;
+        System.out.println(Grad + " Проценты");
     }
+    default void name(ArrayList<String> Tlist) {
+        name.addAll(Tlist);
+        //System.out.println(name + " Имя");
+    }
+
 }
