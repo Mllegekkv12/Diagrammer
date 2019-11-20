@@ -20,7 +20,7 @@ public interface ToCalculate {
             Grad.add((int) (sectors.get(i)*360));
         }
         System.out.println(Grad + " Основной");
-        Grad.clear();
+       // Grad.clear();
         return sector;
     }
 }

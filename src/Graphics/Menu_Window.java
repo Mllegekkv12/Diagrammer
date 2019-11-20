@@ -32,6 +32,7 @@ public class Menu_Window extends Diagram_Window implements ToCalculate {
                 double n = Double.parseDouble(textField.getText());
                     System.out.println(n);
                     list.add(n);
+                    Grad.clear();
                     textField.setText(""); //TODO ДОБАВИТЬ ЦИКЛ ВВОДА ЗНАЧЕНИЙ В МАССИВ ПО НАЖАТИЮ ENTER
                     repaint();
                     revalidate();

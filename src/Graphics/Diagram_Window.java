@@ -46,11 +46,11 @@ public class Diagram_Window extends WindowFrame implements ToCalculate {
             setForeground(Color.black);
             int ty=0;
 
-            for (Integer integer : Grad) {
-                System.out.println(ty + " ty");
-                System.out.println(integer + " aInt");
-                g.fillArc(100, 100, 300, 300, ty, integer);
-                ty = integer;
+            for (int i = 0; i < Grad.size(); i++) {
+                //System.out.println(ty + " ty");
+                //System.out.println(integer + " aInt");
+                g.fillArc(100, 100, 300, 300, ty, Grad.get(i));
+                ty = Grad.get(i);
             }
 //            g.fillArc(100, 105, 300, 300, 0, 34);
 //            System.out.println(" idi naxui");
