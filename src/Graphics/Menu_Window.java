@@ -14,7 +14,6 @@ public class Menu_Window extends Diagram_Window implements ToCalculate {
 
         ArrayList<Double> list = new ArrayList<>();
         ArrayList<String> Tlist = new ArrayList<>();
-
         final JFrame f = new JFrame("Diagrammer");
         final JFrame names = new JFrame("List of names");
         JTextField textField = new JTextField(7);
@@ -32,7 +31,7 @@ public class Menu_Window extends Diagram_Window implements ToCalculate {
                 names.setResizable(false);
                 for (int i = 0; i < Grad.size(); i++) {
                     setLayout(new FlowLayout(FlowLayout.CENTER));
-                    names.add(new Label(i + 1 + ". " + (Grad.get(i)/3.6) + "% " + Name.get(i)));
+                    names.add(new Label(i + 1 + ". " + (String.format("%.2f",Grad.get(i)/3.6)) + "% " + Name.get(i)));
                 }
                 Name.clear();
                 list.clear();
