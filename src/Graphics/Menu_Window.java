@@ -19,10 +19,12 @@ public class Menu_Window extends Diagram_Window implements ToCalculate {
         JTextField textField = new JTextField(7);
         JTextField text = new JTextField(10);
 
-        JButton button = new JButton("Calculate");
+        JButton button = new JButton("Построить график");
         AbstractAction changewindow = new AbstractAction() {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Тут будет открываться окно с готовой диаграммой; возможно здесь будет функция подсчета");
+                Name.clear();
+                list.clear();
                 Draws d = new Draws();
                 d.Drawing();
             }
