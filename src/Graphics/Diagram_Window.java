@@ -3,7 +3,6 @@ package Graphics;
 import abstraction.WindowFrame;
 import logic.ToCalculate;
 import org.jetbrains.annotations.NotNull;
-import java.awt.geom.Arc2D;
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,12 +13,11 @@ public class Diagram_Window extends WindowFrame implements ToCalculate {
 
     static class Drawable extends JFrame implements ToCalculate {
         public void paint(@NotNull Graphics g) {
+            super.paint(g);
             int ty = 0;
             for (Integer integer : Grad) {
-                setForeground(Color.red);
-                g.fillArc(100, 100, 300, 300, ty, integer - 2);
-//                g.drawLine(70, 250, 250, 250);
-//                g.drawLine(100, Grad.get(i), 250, 250);
+                g.setColor(Color.blue);
+                g.fillArc(100, 100, 300, 300, ty, integer - 1);
                 ty += integer;
             }
         }

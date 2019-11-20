@@ -36,10 +36,7 @@ public class Menu_Window extends Diagram_Window implements ToCalculate {
                     textField.setText(""); //TODO ДОБАВИТЬ ЦИКЛ ВВОДА ЗНАЧЕНИЙ В МАССИВ ПО НАЖАТИЮ ENTER
                     repaint();
                     revalidate();
-//                for (Double aDouble : list) {
-//                    //System.out.println(aDouble);
-//                }
-               count(list,0, 0); //TODO ПЕРЕПИСАТЬ ЛОГИКУ ДЛЯ ДИНАМИЧЕСКОГО МАССИВА (С ЦИКЛОМ)
+               count(list,0, 0);
             }
 
         };
