@@ -13,7 +13,6 @@ public class Diagram_Window extends WindowFrame implements ToCalculate {
 
     static class Drawable extends JFrame implements ToCalculate {
         public void paint(@NotNull Graphics g) {
-            super.paint(g);
             int ty = 0;
             for (Integer integer : Grad) {
                 g.setColor(Color.blue);
