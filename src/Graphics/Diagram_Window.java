@@ -48,13 +48,21 @@ public class Diagram_Window extends WindowFrame implements ToCalculate {
          return sector;
      }
  */
+
     static class Drawable extends JFrame implements ToCalculate {
         public void paint(@NotNull Graphics g) {
-            setForeground(Color.green);
-            g.fillArc(100, 100, 300, 300, 0, 120);
-            g.fillArc(95, 103, 300, 300, 120, 120);
-            //g.fillArc(100, 105, 300, 300, 240, 120);
+            setForeground(Color.black);
+            int ty=0;
 
+            for (Integer integer : Grad) {
+                System.out.println(ty + " ty");
+                System.out.println(integer + " aInt");
+                g.fillArc(100, 100, 300, 300, ty, integer);
+                ty = integer;
+            }
+//            g.fillArc(100, 105, 300, 300, 0, 34);
+//            System.out.println(" idi naxui");
+//            g.fillArc(100, 105, 300, 300, 109, 145);
             //  setForeground(Color.blue);
             //  g.fillArc(100, 100, 100, 100, 240, 360);
             //объект g создается автоматически
