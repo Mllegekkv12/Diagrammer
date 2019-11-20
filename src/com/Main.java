@@ -4,7 +4,7 @@ import Graphics.Menu_Window;
 
 public class Main {
     public static void main(String[] args) {
-        new Menu_Window(400, 170);
+        new Menu_Window(400, 200);
     }
 }
 
