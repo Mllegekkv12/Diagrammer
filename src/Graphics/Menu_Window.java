@@ -17,6 +17,8 @@ public class Menu_Window extends Diagram_Window implements ToCalculate, ToDraw {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Тут будет открываться окно с готовой диаграммой; возможно здесь будет функция подсчета");
                 JFrame Dia = new JFrame("Diagrammer");
+                Diagram_Window DW = new Diagram_Window(width, height);
+                //DW.count();
                 Draws d = new Draws();
                 d.Drawing();
             }
