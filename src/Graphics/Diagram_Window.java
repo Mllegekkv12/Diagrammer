@@ -6,11 +6,11 @@ import org.jetbrains.annotations.NotNull;
 import javax.swing.*;
 import java.awt.*;
 
-public class Diagram_Window extends WindowFrame implements ToCalculate {
+
+class Diagram_Window extends WindowFrame implements ToCalculate {
     Diagram_Window(int width, int height) {
         super(width, height);
     }
-
     static class Drawable extends JFrame implements ToCalculate {
         public void paint(@NotNull Graphics g) {
             int ty = 0;
@@ -21,7 +21,6 @@ public class Diagram_Window extends WindowFrame implements ToCalculate {
             }
         }
     }
-
     static class Draws {
         void Drawing() {
             javax.swing.SwingUtilities.invokeLater(() -> {
