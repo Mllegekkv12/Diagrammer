@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
-public class Menu_Window extends Diagram_Window implements ToCalculate {
+public class Menu_Window extends Diagram_Window implements ToCalculate{
     public Menu_Window(int width, int height) {
         super(width, height);
 
