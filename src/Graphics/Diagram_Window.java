@@ -18,20 +18,21 @@ class Diagram_Window extends WindowFrame implements ToCalculate {
             int ty = 0;
             g.drawArc(100, 100, 300, 300, ty, 360);
             g.setColor(Color.blue);
-            if (Grad.size()<2){
+            if (Grad.size() < 2) {
                 g.drawArc(100, 100, 300, 300, ty, 360);
             } else
-            for (Integer integer : Grad) {
-            double fi = ty;
-            double radians = Math.toRadians(fi);
-            int x = (int) (250 + (150 * Math.cos(radians)));
-            int y = (int) (250 + (150 * Math.sin(radians)));
-            System.out.println(x+" x" + y +" y");
-            ty += integer;
-                g.drawLine(250,250,x ,y);
-            }
+                for (Integer integer : Grad) {
+                    double fi = ty;
+                    double radians = Math.toRadians(fi);
+                    int x = (int) (250 + (150 * Math.cos(radians)));
+                    int y = (int) (250 + (150 * Math.sin(radians)));
+                    System.out.println(x + " x" + y + " y");
+                    ty += integer;
+                    g.drawLine(250, 250, x, y);
+                }
         }
     }
+
     static class Draws {
         void Drawing() {
             javax.swing.SwingUtilities.invokeLater(() -> {

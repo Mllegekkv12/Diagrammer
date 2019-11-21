@@ -23,16 +23,16 @@ public class Menu_Window extends Diagram_Window implements ToCalculate {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Тут будет открываться окно с готовой диаграммой; возможно здесь будет функция подсчета");
                 Draws d = new Draws();
+                for (int i = 0; i < Grad.size(); i++) {
+                    setLayout(new FlowLayout(FlowLayout.CENTER));
+                    names.add(new Label(i + 1 + ". " + (String.format("%.5f",Grad.get(i)/3.6)) + "% " + Name.get(i)));
+                }
                 d.Drawing();
                 names.setSize(200, 300);
                 names.setLayout(new FlowLayout(FlowLayout.CENTER));
                 names.setVisible(true);
                 names.setLocationRelativeTo(null);
                 names.setResizable(false);
-                for (int i = 0; i < Grad.size(); i++) {
-                    setLayout(new FlowLayout(FlowLayout.CENTER));
-                    names.add(new Label(i + 1 + ". " + (String.format("%.2f",Grad.get(i)/3.6)) + "% " + Name.get(i)));
-                }
                 Name.clear();
                 list.clear();
             }
